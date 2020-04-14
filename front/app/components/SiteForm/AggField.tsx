@@ -151,7 +151,8 @@ class AggField extends React.Component<AggFieldProps, AggFieldState> {
       this.props.onAddMutation,
       this.props.kind,
       'visibleOptions',
-      this.props.configType
+      this.props.configType,
+      this.props.defaultSort
     );
     return [preselectedUpdater, visibleOptionsUpdater];
   }

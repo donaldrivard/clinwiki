@@ -190,6 +190,7 @@ class AggFilterInputUpdater extends AbstractAggFilterInputUpdater {
 export class AggFilterSiteConfigUpdater extends AbstractAggFilterInputUpdater {
   kind: 'preselected' | 'visibleOptions';
   configType: 'presearch' | 'autosuggest' | 'facetbar';
+  // defaultSort?: 'alphaDesc' | 'alphaAsc' | 'numberDesc' | 'numberAsc';
   constructor(
     agg: string,
     settings: AggFilterSettings,
@@ -197,10 +198,12 @@ export class AggFilterSiteConfigUpdater extends AbstractAggFilterInputUpdater {
     grouping: 'aggs' | 'crowdAggs',
     kind: 'preselected' | 'visibleOptions',
     configType: 'presearch' | 'autosuggest' | 'facetbar'
+    // defaultSort?: 'alphaDesc' | 'alphaAsc' | 'numberDesc' | 'numberAsc'
   ) {
     super(agg, settings, updateSettings, grouping);
     this.kind = kind;
     this.configType = configType;
+    // this.defaultSort = defaultSort;
   }
 
   configureInput() {
